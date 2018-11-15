@@ -13,6 +13,7 @@
 		E6530DA5219D096F0089EF3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6530DA4219D096F0089EF3C /* Assets.xcassets */; };
 		E6530DA8219D096F0089EF3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6530DA6219D096F0089EF3C /* LaunchScreen.storyboard */; };
 		E6530DB0219D0FB90089EF3C /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6530DAF219D0FB90089EF3C /* AddController.swift */; };
+		E6530DB2219D1FE10089EF3C /* DeleteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6530DB1219D1FE10089EF3C /* DeleteController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E6530DA7219D096F0089EF3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6530DA9219D096F0089EF3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6530DAF219D0FB90089EF3C /* AddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
+		E6530DB1219D1FE10089EF3C /* DeleteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E6530D9D219D096E0089EF3C /* AppDelegate.swift */,
 				E6530D9F219D096E0089EF3C /* ViewController.swift */,
 				E6530DA1219D096E0089EF3C /* Main.storyboard */,
+				E6530DB1219D1FE10089EF3C /* DeleteController.swift */,
 				E6530DAF219D0FB90089EF3C /* AddController.swift */,
 				E6530DA4219D096F0089EF3C /* Assets.xcassets */,
 				E6530DA6219D096F0089EF3C /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6530DB2219D1FE10089EF3C /* DeleteController.swift in Sources */,
 				E6530DB0219D0FB90089EF3C /* AddController.swift in Sources */,
 				E6530DA0219D096E0089EF3C /* ViewController.swift in Sources */,
 				E6530D9E219D096E0089EF3C /* AppDelegate.swift in Sources */,
