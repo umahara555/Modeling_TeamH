@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var selectedTodo: Int!
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoList.count
     }
@@ -18,8 +20,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         TodoCell.textLabel!.text = todoList[indexPath.row]
         return TodoCell
     }
-    
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("cell：", indexPath.row, " todoList：", todoList[indexPath.row])
+        
+        self.selectedTodo = indexPath.row
+        if self.selectedTodo != nil {
+            performSegue(withIdentifier: "toDeleteController", sender: nil)
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toDeleteController") {
+            let deleteController: DeleteController = (segue.destination as? DeleteController)!
+            deleteController.indexPathRow = self.selectedTodo
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
