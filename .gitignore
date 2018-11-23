@@ -2,4 +2,4 @@
 *.swp
 UserInterfaceState.xcuserstate
 __pycache__
-/yang_server/.env
+/yang_server/yang_server/.env
