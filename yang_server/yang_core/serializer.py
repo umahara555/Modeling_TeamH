@@ -1,8 +1,13 @@
 from rest_framework import serializers
 
-from .models import Task
+from .models import Lecture, Homework
 
-class TaskSerializer(serializers.ModelSerializer):
+class LectureSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Task
-        fields = ('title',)
+        model = Lecture
+        fields = ('lecture_name', 'teacher_name',)
+
+class HomeworkSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Homework
+        fields = ('lecture', 'title', 'due_date',)

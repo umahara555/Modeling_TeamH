@@ -1,5 +1,6 @@
 from django.contrib import admin
 
-from .models import Task
+from .models import Lecture, Homework
 
-admin.site.register(Task)
+admin.site.register(Lecture)
+admin.site.register(Homework)
