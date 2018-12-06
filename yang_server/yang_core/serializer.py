@@ -10,7 +10,7 @@ class LectureSerializer(serializers.ModelSerializer):
 class HomeworkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Homework
-        fields = ('lecture_id', 'title', 'abstract', 'due_date',)
+        fields = ('lecture', 'title', 'abstract', 'due_date',)
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -20,14 +20,14 @@ class UserSerializer(serializers.ModelSerializer):
 class UserHomeworkSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserHomework
-        fields = ('user_id', 'homework_id', 'state',)
+        fields = ('user', 'homework', 'state',)
 
 class ThreadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Thread
-        fields = ('user_id', 'homework_id', 'title', 'message', 'created',)
+        fields = ('user', 'homework', 'title', 'message', 'created',)
 
 class ReplySerializer(serializers.ModelSerializer):
     class Meta:
         model = Reply
-        fields = ('user_id', 'homework_id', 'message', 'created',)
+        fields = ('user', 'thread', 'message', 'created',)
