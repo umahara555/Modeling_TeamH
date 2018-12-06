@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from .models import Lecture, Homework, User, UserHomework
-from .serializer import LectureSerializer, HomeworkSerializer, UserSerializer, UserHomeworkSerializer
+from .models import Lecture, Homework, User, UserHomework, Thread, Reply
+from .serializer import LectureSerializer, HomeworkSerializer, UserSerializer, UserHomeworkSerializer, ThreadSerializer, ReplySerializer
 
 class LectureViewSet(viewsets.ModelViewSet):
     queryset = Lecture.objects.all()
@@ -18,3 +18,11 @@ class UserViewSet(viewsets.ModelViewSet):
 class UserHomeworkViewSet(viewsets.ModelViewSet):
     queryset = UserHomework.objects.all()
     serializer_class = UserHomeworkSerializer
+
+class ThreadViewSet(viewsets.ModelViewSet):
+    queryset = Thread.objects.all()
+    serializer_class = ThreadSerializer
+
+class ReplyViewSet(viewsets.ModelViewSet):
+    queryset = Reply.objects.all()
+    serializer_class = ReplySerializer

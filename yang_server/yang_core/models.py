@@ -9,9 +9,9 @@ class Lecture(models.Model):
 
 class Homework(models.Model):
     lecture_id = models.ForeignKey(Lecture, on_delete=models.CASCADE, default=1)
-    title =  models.CharField(max_length=256)
+    title =  models.CharField(max_length=128)
     abstract =  models.CharField(max_length=512)
-    due_date =  models.DateTimeField('date published')
+    due_date =  models.DateTimeField()
 
     def __str__(self):
         return self.title
@@ -26,3 +26,22 @@ class UserHomework(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     homework_id = models.ForeignKey(Homework, on_delete=models.CASCADE, default=1)
     state = models.BooleanField()
+
+class Thread(models.Model):
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    homework_id = models.ForeignKey(Homework, on_delete=models.CASCADE, default=1)
+    title = models.CharField(max_length=128)
+    message = models.CharField(max_length=512)
+    created = models.DateTimeField()
+
+    def __str__(self):
+        return self.title
+
+class Reply(models.Model):
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    thread_id = models.ForeignKey(Thread, on_delete=models.CASCADE, default=1)
+    message = models.CharField(max_length=512)
+    created =  models.DateTimeField()
+
+    def __str__(self):
+        return self.thread_id
