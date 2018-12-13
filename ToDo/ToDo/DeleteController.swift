@@ -6,13 +6,11 @@
 //
 
 import UIKit
-
 class DeleteController: UIViewController {
 
     @IBOutlet weak var TodoName: UILabel!
     
     var indexPathRow:Int!
-    
     
     @IBAction func TodoDeleteButton(_ sender: Any) {
         todoList.remove(at: indexPathRow)
