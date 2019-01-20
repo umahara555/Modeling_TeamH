@@ -7,5 +7,6 @@ import hashlib
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('email', 'name', 'password',)
-        write_only_fields = ('email', 'password',)
+        fields = ('id', 'email', 'name', 'password',)
+        extra_kwargs = {'email': {'write_only': True},
+                        'password': {'write_only': True},}
