@@ -8,8 +8,16 @@
 
 import UIKit
 
+var YankList = [String]()
 class AddController: UIViewController {
 
+    @IBOutlet weak var YankTextField: UITextField!
+    
+    @IBAction func YankAddButton(_ sender: Any) {
+        YankList.append(YankTextField.text!)
+        YankTextField.text = ""
+        UserDefaults.standard.set(YankList, forKey:"Yank")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
