@@ -4,4 +4,4 @@ from .views import UserViewSet
 from . import views
 
 router = routers.DefaultRouter()
-router.register('users', UserViewSet)
+router.register('users', UserViewSet, basename='user')
