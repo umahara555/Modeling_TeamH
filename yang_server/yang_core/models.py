@@ -35,3 +35,10 @@ class Homework(models.Model):
 
     def __str__(self):
         return f'{self.lecture_id.subject} : {self.title}'
+
+class UserLecture(models.Model):
+    user_id = models.ForeignKey(User, on_delete=models.PROTECT)
+    lecture_id = models.ForeignKey(Lecture, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return f'{self.user_id.name} : {self.lecture_id.subject}'
