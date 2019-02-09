@@ -1,8 +1,8 @@
 from rest_framework import viewsets
 from django.shortcuts import get_object_or_404
 
-from .models import User, Lecture, Homework, UserLecture
-from .serializer import UserSerializer, LectureSerializer, HomeworkSerializer, UserLectureSerializer
+from .models import User, Lecture, Homework, UserLecture, UserHomework
+from .serializer import UserSerializer, LectureSerializer, HomeworkSerializer, UserLectureSerializer, UserHomeworkSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -16,6 +16,10 @@ class HomeworkViewSet(viewsets.ModelViewSet):
     queryset = Homework.objects.all()
     serializer_class = HomeworkSerializer
 
-class UserHomeworkViewSet(viewsets.ModelViewSet):
+class UserLectureViewSet(viewsets.ModelViewSet):
     queryset = UserLecture.objects.all()
     serializer_class = UserLectureSerializer
+
+class UserHomeworkViewSet(viewsets.ModelViewSet):
+    queryset = UserHomework.objects.all()
+    serializer_class = UserHomeworkSerializer

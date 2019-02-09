@@ -42,3 +42,13 @@ class UserLecture(models.Model):
 
     def __str__(self):
         return f'{self.user_id.name} : {self.lecture_id.subject}'
+
+class UserHomework(models.Model):
+    states = (('未着手','未着手'),('処理中','処理中'),('完了','完了'))
+
+    user_id = models.ForeignKey(User, on_delete=models.PROTECT)
+    homework_id = models.ForeignKey(Homework, on_delete=models.PROTECT)
+    state = models.CharField(max_length=3, choices=states, default='未着手')
+
+    def __str__(self):
+        return f'{self.user_id.name} : {self.homework_id.lecture_id.subject} : {self.homework_id.title}'
