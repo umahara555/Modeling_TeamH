@@ -34,4 +34,4 @@ class Homework(models.Model):
     due = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return f'{self.lecture_id.subject} :'
+        return f'{self.lecture_id.subject} : {self.title}'
