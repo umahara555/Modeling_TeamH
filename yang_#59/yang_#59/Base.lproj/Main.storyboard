@@ -347,8 +347,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IDを入力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctj-Gd-Sty">
-                                <rect key="frame" x="166" y="234" width="70" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nameを入力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctj-Gd-Sty">
+                                <rect key="frame" x="166" y="234" width="95" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -377,13 +377,28 @@
                                     <segue destination="Akf-Hm-1KL" kind="show" id="L9R-MB-BoJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="emailを入力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnQ-6O-Nzt">
+                                <rect key="frame" x="166" y="350" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8BC-ER-Htz">
+                                <rect key="frame" x="166" y="379" width="267" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5eF-xO-Ync"/>
                     </view>
                     <connections>
-                        <outlet property="ChangeField" destination="dNX-cs-KA8" id="QO5-aq-Ryf"/>
-                        <outlet property="ChanheField_2" destination="v00-Ci-4r2" id="pu0-7q-0dj"/>
+                        <outlet property="email" destination="8BC-ER-Htz" id="yX2-1T-PYH"/>
+                        <outlet property="name" destination="dNX-cs-KA8" id="5FC-Hg-YTa"/>
+                        <outlet property="password" destination="v00-Ci-4r2" id="GD4-c8-jcD"/>
                         <segue destination="49e-Tb-3d3" kind="presentation" identifier="TodoChange" id="jJ2-6f-FUE"/>
                     </connections>
                 </viewController>
@@ -417,7 +432,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="jJ2-6f-FUE"/>
-        <segue reference="XUu-kh-Klr"/>
+        <segue reference="Htl-ZK-IlF"/>
         <segue reference="84y-2e-Xbg"/>
     </inferredMetricsTieBreakers>
 </document>

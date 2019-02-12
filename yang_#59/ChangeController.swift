@@ -11,39 +11,55 @@ struct User: Codable {
     var id: Int
     var name: String
 }
-var IDbox = [String]()
-var PATHbox = [String]()
+var namebox = [String]()
+var emailbox = [String]()
+var passbox = [String]()
+
 class ChangeController: UIViewController {
     
-    @IBOutlet weak var ChangeField: UITextField!
-    @IBOutlet weak var ChanheField_2: UITextField!
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    
     @IBAction func ChangeButton(_ sender: Any) {
-        if ChangeField.text != "" && ChanheField_2.text != ""{
+        if name.text != "" && email.text != "" && password.text != ""{
             self.performSegue(withIdentifier: "TodoChange", sender: nil)
             
         }
-        IDbox.append(ChangeField.text!)
-        PATHbox.append(ChanheField_2.text!)
+        namebox.append(name.text!)
+        emailbox.append(email.text!)
+        passbox.append(password.text!)
         
-        UserDefaults.standard.set( IDbox, forKey: "IDList" )
-        UserDefaults.standard.set( PATHbox, forKey: "PATHList" )
+        
+        UserDefaults.standard.set( namebox, forKey: "nameList" )
+        UserDefaults.standard.set( emailbox, forKey: "emailList" )
+        UserDefaults.standard.set( passbox, forKey: "passList" )
         post()
     }
     
     func post() {
-        let params:[String:Any] = [
-            "name": self.ChangeField.text!,
-            "password": self.ChanheField_2.text!
+        let params = [
+            "name": name.text,
+            "email": email.text,
+            "password": password.text
         ]
         
-        let str = ChangeField.text!
-        let strData = str.data(using: String.Encoding.utf8)
+        //let str = name.text!
+        //let strData = str.data(using: String.Encoding.utf8)
         
-        let url = NSURL(string: "http://0.0.0.0:8000/api/users/")
+        
+        var apiurl:String = "http://0.0.0.0:8000/api/"
+        
+        if UserDefaults.standard.object(forKey: "OptionList") != nil{
+            apiurl  = UserDefaults.standard.object(forKey: "OptionList") as! String
+        }
+        let url = NSURL(string: apiurl+"users/")
+        
+        //let url = NSURL(string: "http://0.0.0.0:8000/api/users/")
         var request = URLRequest(url: url! as URL)
         
         request.httpMethod = "POST"
-        request.httpBody = strData
+        //request.httpBody = strData
         
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
