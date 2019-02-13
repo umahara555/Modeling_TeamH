@@ -52,3 +52,22 @@ class UserHomework(models.Model):
 
     def __str__(self):
         return f'{self.user_id.name} : {self.homework_id.lecture_id.subject} : {self.homework_id.title}'
+
+class Thread(models.Model):
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    homework_id = models.ForeignKey(Homework, on_delete=models.CASCADE)
+    title = models.CharField(max_length=128)
+    message = models.CharField(max_length=1024)
+    created = models.DateTimeField()
+
+    def __str__(self):
+        return self.title
+
+class Reply(models.Model):
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    thread_id = models.ForeignKey(Thread, on_delete=models.CASCADE)
+    message = models.CharField(max_length=1024)
+    created =  models.DateTimeField()
+
+    def __str__(self):
+        return self.thread_id

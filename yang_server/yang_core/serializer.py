@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import User, Lecture, Homework, UserLecture, UserHomework
+from .models import User, Lecture, Homework, UserLecture, UserHomework, Thread, Reply
 
 import hashlib
 
@@ -29,4 +29,14 @@ class UserLectureSerializer(serializers.ModelSerializer):
 class UserHomeworkSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserHomework
+        fields = '__all__'
+
+class ThreadSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Thread
+        fields = '__all__'
+
+class ReplySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Reply
         fields = '__all__'
