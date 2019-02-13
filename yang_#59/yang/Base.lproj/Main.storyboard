@@ -13,7 +13,7 @@
         <!--課題-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="yang__59" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="yang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,12 +23,12 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="課題画面" id="yvv-a8-ZuY">
-                                        <barButtonItem key="leftBarButtonItem" title="ログイン画面" style="done" id="AHA-mg-Ske">
+                                        <barButtonItem key="leftBarButtonItem" title="オプション" image="outline_settings_black_18pt" style="done" id="AHA-mg-Ske">
                                             <connections>
-                                                <segue destination="hTI-o5-nG4" kind="show" id="Htl-ZK-IlF"/>
+                                                <segue destination="Akf-Hm-1KL" kind="show" id="PNV-rr-XXm"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="課題追加" style="done" id="dQL-2A-14R">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="dQL-2A-14R">
                                             <connections>
                                                 <segue destination="aTg-zE-Qpv" kind="show" id="Pxh-Nw-sbg"/>
                                             </connections>
@@ -71,7 +71,7 @@
         <!--Add Controller-->
         <scene sceneID="fJD-WA-hpo">
             <objects>
-                <viewController id="aTg-zE-Qpv" customClass="AddController" customModule="yang__59" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aTg-zE-Qpv" customClass="AddController" customModule="yang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zg5-w6-uUu">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +122,7 @@
         <!--Segmented Controller-->
         <scene sceneID="22y-84-Cf1">
             <objects>
-                <viewController id="TBn-Cn-J7o" customClass="SegmentedController" customModule="yang__59" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TBn-Cn-J7o" customClass="SegmentedController" customModule="yang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RWv-1G-3us">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,23 +200,11 @@
         <!--Auto Change Controller-->
         <scene sceneID="Yvs-lV-Af0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bGk-bE-w8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="qan-mu-V27" customClass="AutoChangeController" customModule="yang__59" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qan-mu-V27" customClass="AutoChangeController" customModule="yang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G4S-Bd-unB">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCO-kQ-Crr">
-                                <rect key="frame" x="309" y="437" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="START"/>
-                                <state key="normal" title="START"/>
-                                <connections>
-                                    <action selector="SegueButton:" destination="qan-mu-V27" eventType="touchUpInside" id="rQO-g0-wQU"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.44313725490196076" green="0.84705882352941175" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="y9h-Ny-ZWp"/>
                     </view>
                     <connections>
@@ -224,26 +212,18 @@
                         <segue destination="49e-Tb-3d3" kind="presentation" identifier="home" id="GUr-yd-AG9"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGk-bE-w8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-781" y="-1076"/>
+            <point key="canvasLocation" x="-1247" y="-1181"/>
         </scene>
         <!--Option Controller-->
         <scene sceneID="uRf-D2-ItR">
             <objects>
-                <viewController id="Akf-Hm-1KL" customClass="OptionController" customModule="yang__59" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Akf-Hm-1KL" customClass="OptionController" customModule="yang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Rt-pq-rdf">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2w-o3-wnH">
-                                <rect key="frame" x="590" y="91" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="OptionButton:" destination="Akf-Hm-1KL" eventType="touchUpInside" id="nY9-gB-VBr"/>
-                                    <segue destination="hTI-o5-nG4" kind="show" id="XUu-kh-Klr"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2u7-Wh-tkJ">
                                 <rect key="frame" x="191" y="91" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -251,22 +231,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2w-o3-wnH">
+                                <rect key="frame" x="606" y="91" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="OptionButton:" destination="Akf-Hm-1KL" eventType="touchUpInside" id="nY9-gB-VBr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lne-GV-iu8"/>
                     </view>
                     <connections>
                         <outlet property="OptionField" destination="2u7-Wh-tkJ" id="vh3-gQ-GV4"/>
+                        <segue destination="hTI-o5-nG4" kind="presentation" id="mwU-wA-8x6"/>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="home" id="M5t-lZ-NX2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mlg-aL-oFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-813.28125" y="-359.1796875"/>
+            <point key="canvasLocation" x="-1445" y="-206"/>
         </scene>
         <!--掲示板-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="yang__59" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="yang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -303,7 +293,7 @@
         <!--Item-->
         <scene sceneID="QVB-u3-tSG">
             <objects>
-                <viewController id="TU1-ZB-CEb" customClass="APIController" customModule="yang__59" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TU1-ZB-CEb" customClass="APIController" customModule="yang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vFZ-b7-Qwx">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -358,7 +348,7 @@
         <!--Change Controller-->
         <scene sceneID="dkP-1A-aD5">
             <objects>
-                <viewController id="hTI-o5-nG4" customClass="ChangeController" customModule="yang__59" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hTI-o5-nG4" customClass="ChangeController" customModule="yang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="login" id="f66-J5-o3d">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -399,14 +389,6 @@
                                     <action selector="ChangeButton:" destination="hTI-o5-nG4" eventType="touchUpInside" id="0h9-Ak-I32"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRY-FO-LDp">
-                                <rect key="frame" x="667" y="60" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Akf-Hm-1KL" kind="show" id="L9R-MB-BoJ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="emailを入力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnQ-6O-Nzt">
                                 <rect key="frame" x="166" y="350" width="93" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -421,6 +403,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRY-FO-LDp">
+                                <rect key="frame" x="680" y="57" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="outline_settings_black_18pt"/>
+                                <connections>
+                                    <segue destination="Akf-Hm-1KL" kind="show" id="L9R-MB-BoJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5eF-xO-Ync"/>
@@ -434,7 +424,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VmC-3u-Je2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98.4375" y="-668.5546875"/>
+            <point key="canvasLocation" x="38" y="-1181"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -458,11 +448,13 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="outline_settings_black_18pt" width="36" height="36"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GUr-yd-AG9"/>
-        <segue reference="bBN-tn-r5o"/>
+        <segue reference="jJ2-6f-FUE"/>
+        <segue reference="mwU-wA-8x6"/>
+        <segue reference="L9R-MB-BoJ"/>
         <segue reference="84y-2e-Xbg"/>
     </inferredMetricsTieBreakers>
 </document>

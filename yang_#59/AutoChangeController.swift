@@ -9,9 +9,9 @@
 import UIKit
 
 class AutoChangeController: UIViewController {
-    @IBAction func SegueButton(_ sender: Any) {
-        auto()
-    }
+    //@IBAction func SegueButton(_ sender: Any) {
+      //  auto()
+    //}
     
     func auto(){
         if UserDefaults.standard.object(forKey: "user_id") != nil{
@@ -19,6 +19,11 @@ class AutoChangeController: UIViewController {
         }else{
             self.performSegue(withIdentifier: "login", sender: nil)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        auto()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
