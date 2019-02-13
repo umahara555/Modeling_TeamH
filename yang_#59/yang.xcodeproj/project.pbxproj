@@ -20,6 +20,9 @@
 		6B3ACCAC21F45BED000618FB /* SegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3ACCAB21F45BEC000618FB /* SegmentedController.swift */; };
 		6B3ACCAE21F461FE000618FB /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3ACCAD21F461FE000618FB /* APIController.swift */; };
 		6BC3561B22146BC100DDA11F /* AutoChangeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC3561A22146BC100DDA11F /* AutoChangeController.swift */; };
+		6BC3561D2214A5AB00DDA11F /* GetLecturesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC3561C2214A5AB00DDA11F /* GetLecturesController.swift */; };
+		6BC3561F2214B44E00DDA11F /* AddLectureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC3561E2214B44E00DDA11F /* AddLectureController.swift */; };
+		6BC356212214BCB800DDA11F /* RegisterLectureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC356202214BCB800DDA11F /* RegisterLectureController.swift */; };
 		6BEF6BF6220ED6CF00AC2CDF /* OptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEF6BF5220ED6CF00AC2CDF /* OptionController.swift */; };
 		6BFE8E02220299D4002689CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE8E01220299D4002689CC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -61,6 +64,9 @@
 		6B3ACCAB21F45BEC000618FB /* SegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedController.swift; sourceTree = "<group>"; };
 		6B3ACCAD21F461FE000618FB /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		6BC3561A22146BC100DDA11F /* AutoChangeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoChangeController.swift; sourceTree = "<group>"; };
+		6BC3561C2214A5AB00DDA11F /* GetLecturesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLecturesController.swift; sourceTree = "<group>"; };
+		6BC3561E2214B44E00DDA11F /* AddLectureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLectureController.swift; sourceTree = "<group>"; };
+		6BC356202214BCB800DDA11F /* RegisterLectureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLectureController.swift; sourceTree = "<group>"; };
 		6BEF6BF5220ED6CF00AC2CDF /* OptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionController.swift; sourceTree = "<group>"; };
 		6BFE8E01220299D4002689CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +104,7 @@
 				6B3ACCAD21F461FE000618FB /* APIController.swift */,
 				6B2B1F1C21F048CC000FAA6C /* AddController.swift */,
 				6B2B1F1E21F0521D000FAA6C /* ChangeController.swift */,
+				6BC356202214BCB800DDA11F /* RegisterLectureController.swift */,
 				6B2B1EEB21F0343C000FAA6C /* yang */,
 				6B2B1F0221F03441000FAA6C /* yangTests */,
 				6B2B1F0D21F03441000FAA6C /* yangUITests */,
@@ -123,6 +130,8 @@
 				6BEF6BF5220ED6CF00AC2CDF /* OptionController.swift */,
 				6B2B1EF021F0343C000FAA6C /* SecondViewController.swift */,
 				6B2B1EF221F0343C000FAA6C /* Main.storyboard */,
+				6BC3561E2214B44E00DDA11F /* AddLectureController.swift */,
+				6BC3561C2214A5AB00DDA11F /* GetLecturesController.swift */,
 				6B2B1EF521F03441000FAA6C /* Assets.xcassets */,
 				6B2B1EF721F03441000FAA6C /* LaunchScreen.storyboard */,
 				6BFE8E01220299D4002689CC /* GoogleService-Info.plist */,
@@ -284,12 +293,15 @@
 				6B3ACCAE21F461FE000618FB /* APIController.swift in Sources */,
 				6B2B1EF121F0343C000FAA6C /* SecondViewController.swift in Sources */,
 				6BC3561B22146BC100DDA11F /* AutoChangeController.swift in Sources */,
+				6BC3561D2214A5AB00DDA11F /* GetLecturesController.swift in Sources */,
 				6B2B1EED21F0343C000FAA6C /* AppDelegate.swift in Sources */,
+				6BC3561F2214B44E00DDA11F /* AddLectureController.swift in Sources */,
 				6B3ACCAC21F45BED000618FB /* SegmentedController.swift in Sources */,
 				6B2B1EEF21F0343C000FAA6C /* FirstViewController.swift in Sources */,
 				6B2B1F1F21F0521D000FAA6C /* ChangeController.swift in Sources */,
 				6BEF6BF6220ED6CF00AC2CDF /* OptionController.swift in Sources */,
 				6B2B1F1D21F048CC000FAA6C /* AddController.swift in Sources */,
+				6BC356212214BCB800DDA11F /* RegisterLectureController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
