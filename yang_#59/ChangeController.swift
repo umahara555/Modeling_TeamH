@@ -74,6 +74,7 @@ class ChangeController: UIViewController {
                 do {
                     print("JSONSerialization")
                     let json = try JSONDecoder().decode(User.self, from: data)
+                    UserDefaults.standard.set( json.id, forKey: "user_id" )
                     print(json)
                 } catch {
                     print(respons)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hTI-o5-nG4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qan-mu-V27">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -197,6 +197,36 @@
             </objects>
             <point key="canvasLocation" x="2191.40625" y="-278.3203125"/>
         </scene>
+        <!--Auto Change Controller-->
+        <scene sceneID="Yvs-lV-Af0">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGk-bE-w8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="qan-mu-V27" customClass="AutoChangeController" customModule="yang__59" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G4S-Bd-unB">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCO-kQ-Crr">
+                                <rect key="frame" x="309" y="437" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="START"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="SegueButton:" destination="qan-mu-V27" eventType="touchUpInside" id="rQO-g0-wQU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="y9h-Ny-ZWp"/>
+                    </view>
+                    <connections>
+                        <segue destination="hTI-o5-nG4" kind="presentation" identifier="login" id="bBN-tn-r5o"/>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="home" id="GUr-yd-AG9"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-781" y="-1076"/>
+        </scene>
         <!--Option Controller-->
         <scene sceneID="uRf-D2-ItR">
             <objects>
@@ -329,7 +359,7 @@
         <scene sceneID="dkP-1A-aD5">
             <objects>
                 <viewController id="hTI-o5-nG4" customClass="ChangeController" customModule="yang__59" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="f66-J5-o3d">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="login" id="f66-J5-o3d">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -409,7 +439,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="home" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -431,8 +461,8 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jJ2-6f-FUE"/>
-        <segue reference="Htl-ZK-IlF"/>
+        <segue reference="GUr-yd-AG9"/>
+        <segue reference="bBN-tn-r5o"/>
         <segue reference="84y-2e-Xbg"/>
     </inferredMetricsTieBreakers>
 </document>
