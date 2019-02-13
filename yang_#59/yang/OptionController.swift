@@ -17,7 +17,17 @@ class OptionController: UIViewController {
             let url:String = "http://" + unti + ":8000/api/"
             UserDefaults.standard.set( url, forKey: "OptionList" )
         }
+        change()
     }
+    
+    func change(){
+        if UserDefaults.standard.object(forKey: "user_id") != nil{
+            self.performSegue(withIdentifier: "home", sender: nil)
+        }else{
+            self.performSegue(withIdentifier: "login", sender: nil)
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
